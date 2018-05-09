@@ -11,3 +11,4 @@ zuul:
   routes:
     user-service: /user-api/**
     product-service: /product-api/**
+    category-service: /category-api/**
