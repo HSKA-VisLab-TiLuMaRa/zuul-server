@@ -9,6 +9,6 @@ eureka:
 zuul:
   ignoredServices: '*'
   routes:
-    user-service: /user-api/**
+    user-management: /user-api/**
     product-service: /product-api/**
     category-service: /category-api/**
