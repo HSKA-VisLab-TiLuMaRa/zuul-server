@@ -10,3 +10,4 @@ zuul:
   ignoredServices: '*'
   routes:
     user-service: /user-api/**
+    product-service: /product-api/**
