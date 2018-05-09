@@ -1,0 +1,39 @@
+{
+	"variables": [],
+	"info": {
+		"name": "vslab",
+		"_postman_id": "03e6be38-f73e-dbab-9632-c061db6ed96e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Category",
+			"request": {
+				"url": "",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET Categories",
+			"request": {
+				"url": "localhost:8081/category-api/categories",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "localhost:8081/category-api/categories"
+			},
+			"response": []
+		}
+	]
+}
