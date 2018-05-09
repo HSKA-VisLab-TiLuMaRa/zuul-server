@@ -1,0 +1,306 @@
+{
+	"variables": [],
+	"info": {
+		"name": "vslab",
+		"_postman_id": "fd9a0ff5-09b7-5649-d8c8-e98e3e5da658",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "core",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "composite",
+			"description": "",
+			"item": [
+				{
+					"name": "catalog-management",
+					"description": "",
+					"item": [
+						{
+							"name": "POST Category",
+							"request": {
+								"url": "localhost:8081/catalog-management-api/categories",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": 3,\n\t\"name\": \"Fleisch\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "GET Categories",
+							"request": {
+								"url": "localhost:8081/catalog-management-api/categories",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": "localhost:8081/category-api/categories"
+							},
+							"response": []
+						},
+						{
+							"name": "GET Category",
+							"request": {
+								"url": "localhost:8081/catalog-management-api/categories/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": "localhost:8081/category-api/categories/1"
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Category",
+							"request": {
+								"url": "localhost:8081/catalog-management-api/categories/3",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": 3,\n\t\"name\": \"Fleisch\"\n}"
+								},
+								"description": "localhost:8081/catalog-management-api/categories/3"
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE Category",
+							"request": {
+								"url": "localhost:8081/catalog-management-api/categories/3",
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": "localhost:8081/catalog-management-api/categories/3"
+							},
+							"response": []
+						},
+						{
+							"name": "GET Products",
+							"request": {
+								"url": "localhost:8081/catalog-management-api/products",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": "localhost:8081/catalog-management-api/products"
+							},
+							"response": []
+						},
+						{
+							"name": "GET Product",
+							"request": {
+								"url": "localhost:8081/catalog-management-api/products/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": "localhost:8081/catalog-management-api/products/1"
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Product",
+							"request": {
+								"url": "localhost:8081/catalog-management-api/products/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"name\": \"Kirsche\",\n    \"price\": 10000,\n    \"categoryId\": 0,\n    \"details\": \"Eins tolle Banane vong Kirschigkeit her!\"\n}"
+								},
+								"description": "localhost:8081/catalog-management-api/products/1"
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE Product",
+							"request": {
+								"url": "localhost:8081/catalog-management-api/products/1",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": "localhost:8081/catalog-management-api/products/1"
+							},
+							"response": []
+						},
+						{
+							"name": "POST Product",
+							"request": {
+								"url": "localhost:8081/catalog-management-api/products",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 3,\n    \"name\": \"Zwiebel\",\n    \"price\": 11230,\n    \"categoryId\": 0,\n    \"details\": \"*heul*\"\n}"
+								},
+								"description": "localhost:8081/catalog-management-api/products"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "user",
+					"description": "",
+					"item": [
+						{
+							"name": "GET Users",
+							"request": {
+								"url": "localhost:8081/user-api/users",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": "localhost:8081/user-api/users"
+							},
+							"response": []
+						},
+						{
+							"name": "GET User",
+							"request": {
+								"url": "localhost:8081/user-api/users/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": "localhost:8081/user-api/users/1"
+							},
+							"response": []
+						},
+						{
+							"name": "POST User",
+							"request": {
+								"url": "localhost:8081/user-api/users",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"id\": 4,\n        \"username\": \"eklaus\",\n        \"firstname\": \"Eugen-Jonathan\",\n        \"lastname\": \"Klaus\",\n        \"roleid\": 0\n    }"
+								},
+								"description": "localhost:8081/user-api/users"
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE User",
+							"request": {
+								"url": "localhost:8081/user-api/users/4",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": "localhost:8081/user-api/users/4"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "zuul",
+			"description": "",
+			"item": []
+		}
+	]
+}
