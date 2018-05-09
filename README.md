@@ -4,6 +4,11 @@
 
 This project is part of the microservice architecture which can be found [here](https://github.com/HSKA-VisLab-TiLuMaRa).
 
+## Maven commands
+- `mvn install`
+- `mvn spring-boot:run`
+- `mvn clean`
+
 ## Zuul-Server
 
 - Zuul edgeserver is the public API for the backend
@@ -13,7 +18,7 @@ This project is part of the microservice architecture which can be found [here](
 - lookups paths using the eureka-server
 
 
-# Organization  Authors 
+# Organization  Authors
 [Tim Piotrowski](timpio95@web.de)
 
 [Lukas Kugler](lukikugler@gmail.com)
