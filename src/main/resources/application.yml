@@ -6,6 +6,10 @@ eureka:
     statusPageUrlPath: /info
     healthCheckUrlPath: /health
 
+management:
+  security:
+    enabled: false
+
 zuul:
   ignoredServices: '*'
   routes:
