@@ -8,18 +8,21 @@ eureka:
 
 management:
   security:
+    basic:
+      enabled: false
     user:
       username: bob
       password: secret
-    oauth2:    
+    oauth2:
       client:
         accessTokenUri: http://localhost:8099/oauth/token
         userAuthorizationUri: http://localhost:8099/dialog/authorize
         clientId: xyz123
-        clientSecret: ssh-password   
+        clientSecret: ssh-password
+        useCurrentUri: false
       resource:
         userInfoUri: http://localhost:8099/api/userinfo
-        preferTokenInfo: false  
+        preferTokenInfo: false
     sessions: ALWAYS
 
 zuul:
