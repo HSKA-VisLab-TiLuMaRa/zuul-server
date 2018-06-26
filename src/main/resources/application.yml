@@ -11,13 +11,12 @@ security:
 #    enabled: false
   oauth2:
     client:
-      access-token-uri:   http://localhost:8099/auth/oauth/token
-      user-authorization-uri: http://localhost:8099/auth/oauth/authorize
-      client-id: acme
-      client-secret: acmesecret
-      # grant-type: authorization_code
+      access-token-uri: http://localhost:8099/oauth/token
+      user-authorization-uri: http://localhost:8099/dialog/authorize
+      client-id: xyz123
+      client-secret: ssh-password
     resource:
-      userInfoUri: http://localhost:8099/auth/user
+      userInfoUri: http://localhost:8099/api/clientinfo 
 
 
 zuul:
@@ -26,12 +25,10 @@ zuul:
     user-management: /user-api/**
     catalog-management: /catalog-management-api/**
 
-    oauth-service:
-      path: /auth/**
-      strip-prefix: false
-      # sensitiveHeaders:
-
 logging:
   level:
     org.springframework.security: debug
     org.springframework.cloud.security.oauth2: Trace
+
+
+    
