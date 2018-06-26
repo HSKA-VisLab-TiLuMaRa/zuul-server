@@ -6,27 +6,34 @@ eureka:
     statusPageUrlPath: /info
     healthCheckUrlPath: /health
 
-management:
-  security:
-    basic:
-      enabled: false
-    user:
-      username: bob
-      password: secret
-    oauth2:
-      client:
-        accessTokenUri: http://localhost:8099/oauth/token
-        userAuthorizationUri: http://localhost:8099/dialog/authorize
-        clientId: xyz123
-        clientSecret: ssh-password
-        useCurrentUri: false
-      resource:
-        userInfoUri: http://localhost:8099/api/userinfo
-        preferTokenInfo: false
-    sessions: ALWAYS
+security:
+#  basic:
+#    enabled: false
+  oauth2:
+    client:
+      access-token-uri:   http://localhost:8099/auth/oauth/token
+      user-authorization-uri: http://localhost:8099/auth/oauth/authorize
+      client-id: acme
+      client-secret: acmesecret
+    resource:
+      userInfoUri: http://localhost:8099/auth/user
+
 
 zuul:
   ignoredServices: '*'
   routes:
     user-management: /user-api/**
     catalog-management: /catalog-management-api/**
+
+    oauth-service:
+      path: /auth/**
+      strip-prefix: false
+      sensitiveHeaders:
+
+logging:
+  level:
+    org.springframework.security: debug
+    org.springframework.cloud.security.oauth2: Trace
+
+
+    
