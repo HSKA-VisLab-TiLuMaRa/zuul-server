@@ -15,6 +15,7 @@ security:
       user-authorization-uri: http://localhost:8099/auth/oauth/authorize
       client-id: acme
       client-secret: acmesecret
+      # grant-type: authorization_code
     resource:
       userInfoUri: http://localhost:8099/auth/user
 
@@ -28,12 +29,9 @@ zuul:
     oauth-service:
       path: /auth/**
       strip-prefix: false
-      sensitiveHeaders:
+      # sensitiveHeaders:
 
 logging:
   level:
     org.springframework.security: debug
     org.springframework.cloud.security.oauth2: Trace
-
-
-    
